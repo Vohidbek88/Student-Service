@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className='container'>
       <div className="navbar mobile">
         <div id="student-page">
-          <NavLink className={'logo'} to={'/'}>Student.Service</NavLink>
+          <NavLink className={'logo'} to={'/'}>Student.Service<i class="fa-solid fa-briefcase"></i></NavLink>
         </div>
         {
           !status && <>
@@ -81,7 +81,7 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <div className="nav-item" id="student-page">
-          <NavLink className={'logo'} to={'/'}>Student.Service</NavLink>
+          <NavLink className={'logo'} to={'/'}>Student.Service <i class="fa-solid fa-briefcase"></i></NavLink>
         </div>
         <div className="nav-item" id="dashboard">
           <NavLink to={'/'}>Home</NavLink>

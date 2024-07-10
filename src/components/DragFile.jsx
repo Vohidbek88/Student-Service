@@ -21,7 +21,7 @@ const DragFile = (props) => {
         form.append(checkTitle, props.id);
 
         setMsg('Uploading...');
-        const checkUrl = props.sub_title ? 'http://api.edu-sts.uz:8030/api/v1/subcategory-two-file-create-delete-student/' : 'http://api.edu-sts.uz:8030/api/v1/category-one-student-file-create-delete/'
+        const checkUrl = props.sub_title ? 'https://api.edu-sts.uz/api/v1/subcategory-two-file-create-delete-student/' : 'https://api.edu-sts.uz/api/v1/category-one-student-file-create-delete/'
         try {
             const response = await axios.post(checkUrl, form,
                 {
@@ -54,7 +54,7 @@ const DragFile = (props) => {
             {
                 !file && (
                     <button onClick={() => inputRef.current.click()} className='file-btn'>
-                        <i className="fa-solid fa-upload"></i> <span>Upload</span>
+                        <i className="fa-solid fa-upload"></i> <span>Fayl yuklash</span>
                     </button>
                 )
             }

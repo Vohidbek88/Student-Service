@@ -10,7 +10,7 @@ const Profile = () => {
   const navigate=useNavigate()
     const logOut=async()=>{
       try {
-        const res=await axios.post('http://api.edu-sts.uz:8030/api/v1/user/logout/');
+        const res=await axios.post('/user/logout/');
         console.log(res.data);
         localStorage.removeItem('user_id');
         localStorage.removeItem('token');
@@ -61,7 +61,7 @@ const Profile = () => {
           <strong>Last Name:</strong> {userData?.user?.last_name}
         </div>
         <div className={styles.infoItem}>
-<strong><button onClick={logOut} style={{backgroundColor:'red'}}>Logout</button></strong>
+<strong><button onClick={logOut} style={{backgroundColor:'red',display:'flex',justifyContent:'end'}}>Logout</button></strong>
         </div>
       </div>
     </div>

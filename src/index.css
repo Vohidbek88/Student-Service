@@ -7,6 +7,19 @@
 body {
   font-family: Arial, sans-serif;
 }
+.info{
+  width: 40vw;
+}
+.info a{
+  font-size: 20px;
+}
+.info a:hover{
+  text-decoration: underline;
+  color: #007bff;
+}
+.info h2{
+  padding: 20px 0;
+}
 .container{
   display: flex;
   align-items: center;
@@ -215,16 +228,36 @@ left: 40%;
 .home img{
   border-radius: 20px;
 }
+.nizom-img{
+  margin:20px auto;
+}
 @media(max-width:768px){
   .home{
     flex-direction: column;
   }
   .home h1{
     margin-bottom: 50px;
+    font-size: 22px;
     text-align: center;
   }
   .home img{
+    width: 100%;
+  }
+  .info{
+    width: 100vw;
+  }
+  .info h2{
+    padding: 0 10px;
+    padding-bottom: 20px;
+  }
+  .info a{
+    margin-bottom: 20px;
+  }
+  .nizom-img{
     width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    overflow-x: scroll;
   }
 }
 

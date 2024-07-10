@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from '../api'
 import DragFile from '../components/DragFile';
 import Card from '../components/Card';
+import Nizompart from '../components/Nizompart';
 const CategoryOne = (props) => {
     const [categ, setCateg] = useState();
     const [filesingle, setFile] = useState([]);
@@ -9,7 +10,7 @@ const CategoryOne = (props) => {
 
         const getObjCateg = async () => {
             try {
-                const res = await axios.get(`http://api.edu-sts.uz:8030/api/v1/category-one-list/${props.id}/`);
+                const res = await axios.get(`https://api.edu-sts.uz/api/v1/category-one-list/${props.id}/`);
                 setCateg(res.data)
             } catch (error) {
                 console.log(error);
@@ -18,7 +19,7 @@ const CategoryOne = (props) => {
         const getSingleFile = async () => {
             const user_id = localStorage.getItem('user_id')
             try {
-                const res = await axios.get(`http://api.edu-sts.uz:8030/api/v1/category-one-filter/${user_id}/${props.id}/`);
+                const res = await axios.get(`https://api.edu-sts.uz/api/v1/category-one-filter/${user_id}/${props.id}/`);
                 setFile(res.data)
                 console.log(res.data);
             } catch (error) {
@@ -34,6 +35,9 @@ const CategoryOne = (props) => {
             <h3>
                 {categ ? categ.title : 'Loading...'}
             </h3>
+           {
+            categ ? <div className='nizom-img'><Nizompart {...categ}/></div>:<h3>Loading...</h3>
+           }
             <div className='file-main'>
            
                 {

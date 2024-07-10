@@ -12,7 +12,6 @@ import { ServicesContext } from './context'
 import axios from './api'
 import CategoryOne from './pages/CategoryOne'
 import SubCategory from './pages/SubCategory'
-import Nabar from './components/Nabar'
 function App() {
 
   const { setUser, userData } = useContext(ServicesContext)
@@ -83,7 +82,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Nabar/> */}
       <Routes>
         <Route index path='/' element={<Home />} />
         <Route path='/dashboard' element={<Dashboard />} />

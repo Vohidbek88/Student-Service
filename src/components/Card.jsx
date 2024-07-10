@@ -5,7 +5,7 @@ import axios from '../api';
 const Card = (props) => {
 
   const onDelete=async()=>{
-    const checkUrl=props.sub_title ? `http://api.edu-sts.uz:8030/api/v1/subcategory-two-file-create-delete-student/${props.id}/`:`http://api.edu-sts.uz:8030/api/v1/category-one-student-file-create-delete/${props.id}/`
+    const checkUrl=props.sub_title ? `https://api.edu-sts.uz/api/v1/subcategory-two-file-create-delete-student/${props.id}/`:`https://api.edu-sts.uz/api/v1/category-one-student-file-create-delete/${props.id}/`
     try {
       const res=await axios.delete(checkUrl);
      
@@ -28,12 +28,12 @@ const Card = (props) => {
           props.file ? <p className='file-name'>Nomi: {props.file.slice(7)}</p>:''
         }
         <div className="card-actions">
-          <a href={'http://api.edu-sts.uz:8030'+props.file} download target='_blank' className="card-button">Ko'rish <i className="fa-solid fa-eye"></i></a>
+          <a href={'https://api.edu-sts.uz/api/v1/'+props.file} download target='_blank' className="card-button">Ko'rish <i className="fa-solid fa-eye"></i></a>
           <button className="card-button" onClick={onDelete}>O'chirish <i className="fa-solid fa-trash"></i></button>
         </div>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default Card;
